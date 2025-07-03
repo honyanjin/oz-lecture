@@ -1,0 +1,116 @@
+/* 
+float >>> 자식은 부모의 높이 잃음 >>> clear 필요(예 clear:both;)
+
+flex >>> 내 display가 flex >>> 부모가 자식 크기를 유지
+  align-items >>> 수직 정렬
+  gap >>> 간격조절
+*/
+
+/* portfolio.html의 시멘틱 구조
+body
+    header
+    #About
+    main
+        #projects
+    aside
+    footer
+*/
+
+body {
+  /* max-width: 1200px; */
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  /* 배경색 넣어서 스크롤 올라갈때 뒤에 안보이게*/
+  background-color: white;
+  /* Aside가 위로 올라감 >>> 안보이게 인덱스 올리기 */
+  z-index: 10;
+}
+
+#About {
+  margin-left: 1%;
+}
+
+main {
+  display: flex; /* main이 flexbox인 부모가 된다~~ */
+  gap: 20px;
+  /* align-items: flex-start; */ /* 위부터 채움 */
+  align-items: stretch; /* 위아래 길게 늘림 */
+  margin-left: 1%;
+}
+
+/* <section>인 projects랑 <Aside> 비율 */
+#projects {
+  /* 자식인 projects가 부모인 main flexbox 안에서 */
+  flex: 3; /* 3만큼 크기 가짐 */
+}
+
+/* float 일때
+aside {
+  float: right;
+  width: 25%
+} 
+*/
+
+aside {
+  flex: 1;
+  padding: 10px;
+  border-left: 3px solid #007bff;
+  position: relative;
+}
+
+aside > h3 {
+  /* position: absolute; */
+  /* top: 10px;
+  right: 10px; */
+  text-align: center;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.project {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* nav 스타일 */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* 기타 텍스트 스타일 */
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
