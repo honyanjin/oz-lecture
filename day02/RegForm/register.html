@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Registration Form</title>
+    </head>
+    <body>
+        <!-- header 시작 --> 
+        <header>
+            <h1>User Registration</h1>
+             <!-- SVG 도형 그리기-->
+            <svg width="100" height="100">
+                 <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="blue" />
+            </svg>
+            <nav>
+                <ul>
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#registration">등록</a></li>
+                </ul>
+            </nav>
+           
+        </header>
+        <!-- header 끝 --> 
+
+        <hr>
+
+        <!-- main 시작 -->
+        <main>
+            <!-- 가입 섹션 -->
+            <section class="Registrationform" id="Registrationform">            
+                <h2>Registration Form</h2>
+                <!-- 가입폼 시작-->
+                <form action="#" method="POST">                  
+                    <!-- 이름 --> 
+                    <div class="Name" id="Name">      
+                        <label for="username">이름 : </label>
+                        <input type="text" id="username" name="username" placeholder="사용자의 이름">
+                    </div>
+
+                    <!-- 이메일 -->  
+                    <div class="Email" id="Email">           
+                        <label for="email">이메일 : </label>
+                        <input type="email" id="email" name="email" placeholder="사용자의 이메일 주소">
+                    </div>
+                    
+                    <!-- 비밀번호 --> 
+                    <div class="Password" id="Password">
+                        <label for="password">비밀번호 : </label>
+                        <input type="password" id="password" name="password" placeholder="비밀번호">
+                    </div>            
+                    
+                    <!-- 생년월일 --> 
+                    <div class="Birthdate" id="Birthdate">
+                        <label for="birthdate">생년월일 : </label>
+                        <input type="date" id="birthdate" name="birthdate" placeholder="생년월일">
+                    </div>
+
+                    <!-- 나이 -->   
+                    <div class="Age" id="Age">         
+                        <label for="age">나이 : </label>
+                        <input type="number" id="age" name="age" placeholder="나이" min="18" max="100">
+                    </div>
+
+                    <br>
+
+                    <!-- 서비스 만족도 -->
+                    <div class="Quality" id="Quality">
+                        <label for="quality">서비스 만족도 : </label>        
+                        <input type="range" id="quality" name="quality" placeholder="서비스 만족도" min="1" max="10" step="1">
+                    </div>
+
+                    <br>
+                    
+                    <!-- 성별 -->
+                    <div class="Gender" id="Gender">
+                        <label for="gender_radio">성별 : </label>      
+                        <div id="gender_radio">
+                            <input type="radio" id="gender_male" name="gender_male" value="male">
+                            <label for="gender_male">남성</label>      
+                            <input type="radio" id="gender_female" name="gender_female" value="female">
+                            <label for="gender_female">여성</label>  
+                            <input type="radio" id="gender_other" name="gender_other" value="other">
+                            <label for="gender_other">기타</label>   
+                        </div>
+                    </div>
+                    
+                    <!-- 관심사 -->
+                    <div class="Interest" id="Interest">
+                        <label for="interest_checkbox">관심사 : </label> 
+                        <div id="interest_checkbox">
+                        <input type="checkbox" id="interest_coding" name="interest_coding" value="Coding">
+                            <label for="interest_coding">코딩</label>
+                            <input type="checkbox" id="interest_gaming" name="interest_gaming" value="gaming">
+                            <label for="interest_gaming">게임</label>
+                            <input type="checkbox" id="interest_reading" name="interest_reading" value="reading">
+                            <label for="interest_reading">독서</label> 
+                        </div>
+                    </div>
+
+                    <!-- 국가선택 -->
+                    <div class="Nation" id="Nation">
+                        <label for="nation_select">국적 : </label>
+                        <select name="nation_select" id="nation_select">
+                            <option value="South Korea">대한민국</option>
+                            <option value="USA">미국</option>
+                            <option value="Japan">일본</option>
+                            <option value="China">중국</option>
+                            <option value="UK">영국</option>
+                        </select>
+                    </div>
+                    
+                    <hr> 
+
+                    <!-- 제출, 초기화 -->
+                    <div class="Button">
+                        <button type="submit" id="BT_submit">제출</button>
+                        <button type="reset" id="BT_reset">초기화</button>
+                    </div>
+                </form> 
+                <!-- 가입폼 끝 -->  
+                
+                <!-- 안내 문구 아티클 시작-->
+                <article>
+                    <p>고양이를 보려면 위 정보를 정확히 입력하고 회원가입 하십시오.</p>
+                    <!-- 캔버스 : 아직 그릴 줄 모름 : 나중에 JavaScript에서 한다고 함-->
+                    <canvas id="info_Canvas" width="200" height="200" style="border:1px solid #000;"></canvas>                    
+                </article> 
+                <!-- 안내 문구 아티클 끝-->
+            </section>
+
+            <hr>
+
+            <!-- Aside -->
+            <aside>
+                <h4>Registration Tips</h4> 
+                <p>우리집 고양이는 2마리 입니다.</p>
+                <img src="images/logo.svg" alt="고양이 로고"></svg>
+                <h4>Contact Support</h4>
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls width="300"></video>
+                <p>010-0000-000 으로 연락주시면 아무도 받지 않습니다.</p>
+            </aside> 
+            
+        </main>
+        <!-- main 끝 -->   
+         
+        <hr>
+
+        <footer>           
+            <p>&copy; 2025 HJLEE Cat Website</p>
+        </footer>
+    </body>
+</html>
