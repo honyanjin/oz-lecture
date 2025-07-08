@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DAY09</title>
+  </head>
+  <body>
+    <script>
+      // var, let, const 실습
+
+      // var 선언
+      var name = "oz";
+      // var는 재선언 가능
+      var name = "lalala";
+      // 값 재할당
+      name = "cocoa";
+
+      // let
+      let age = 25;
+      // 재선언 불가능
+      // 값 재할당
+      age = 90;
+
+      //const
+      const pi = 3.14;
+      // 재할당, 값재할당 불가능
+
+      // 객체 Object나 배열은 참조가 고정되지 않고 내부 속성이나 요소를 변경할 수 있다.
+      const profile = { name: "hojin" };
+      profile.name = "hjlee"; // 속성 값 재할당
+
+      // string 문자열
+      let string1 = "작은 따옴표(')가 포함됩니다.";
+      let string2 = '큰 따옴표(")가 포함됩니다.';
+      console.log("string1", string1);
+      console.log("string2", string2);
+
+      // 문자열 연결
+      let stringA = "문자열" + " 연결";
+      let stringB = string1 + " " + string2;
+      console.log("stringA", stringA);
+      console.log("stringB", stringB);
+
+      // ES6 문자열 (백틱 ``)
+      let myName = "hojin";
+      let es6String = `나의 이름은 ${myName}입니다.`;
+      console.log(es6String);
+
+      // 숫자형
+      let num1 = 1;
+      let num2 = 2;
+      console.log("num1 + num2 : ", num1 + num2);
+
+      let float1 = 0.1;
+      let float2 = 1.1;
+      console.log("float1 + float2 : ", float1 + float2);
+
+      // 논리형
+      let boolean1 = true;
+      let boolean2 = false;
+      let boolean3 = 10 < 20;
+      let boolean4 = 10 > 20;
+      console.log("boolean1 : ", boolean1);
+      console.log("boolean2 : ", boolean2);
+      console.log("boolean3 : ", boolean3);
+      console.log("boolean4 : ", boolean4);
+
+      //객체
+      //배열
+      let studentScore = [80, 70, 90, 60];
+      let emptyScore = []; //빈배열
+      console.log(studentScore);
+      console.log("studentScore[0]", studentScore[0]);
+      console.log("studentScore[1]", studentScore[1]);
+      console.log("studentScore[2]", studentScore[2]);
+      console.log("studentScore[3]", studentScore[3]);
+      console.log("studentScore.length", studentScore.length);
+      console.log("emptyScore.length", emptyScore.length);
+
+      // 객체 리터럴 Objecet
+      let studentScoreObj = {
+        koreanScore: 80,
+        englishScore: 70,
+        mathScore: 90,
+        scienceScore: 60,
+      };
+      console.log(studentScoreObj.koreanScore);
+      console.log("studentScoreOBj.koreanScore", studentScoreObj.koreanScore);
+
+      //타입확인
+      console.log(typeof es6String);
+      console.log(typeof float1);
+      console.log(typeof boolean1);
+      console.log(typeof studentScoreObj);
+    </script>
+  </body>
+</html>
