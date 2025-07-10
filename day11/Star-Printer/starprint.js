@@ -25,7 +25,8 @@ const printReverseStars = function (count = 1) {
 // 사각형
 const printSquare = (count = 1) => {
   for (let i = 0; i < count; i++) {
-    console.log(`${i + 1}: ` + "*".repeat(count)); // 콘솔 출력이 완전히 같으면 콘솔에서 압축되서 안보임.
+    console.log(`${String(i + 1).padStart(2, "0")}: ` + "*".repeat(count)); // 콘솔 출력이 완전히 같으면 콘솔에서 압축되서 안보임.
+    // 숫자 정렬 때매 신경쓰여서 앞에 0붙임
   }
 };
 
@@ -50,7 +51,7 @@ function main() {
       // 역순별
       console.log("--- 역순별 ---");
       printReverseStars(num);
-
+      5;
       // 사각형
       console.log("--- 사각형 ---");
       printSquare(num);
