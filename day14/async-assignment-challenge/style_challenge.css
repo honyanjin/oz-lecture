@@ -1,0 +1,11 @@
+.container {
+  max-width: 600px;
+  margin-top: 50px;
+}
+.post {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.error {
+  color: red;
+}
